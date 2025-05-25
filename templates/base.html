@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Squadra di Calcio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <img src="{{ url_for('static', filename='images/gasolina_logo-removebg-preview.png') }}" alt="Logo Squadra"
+                class="logo-img">
+            <nav class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="#rosa" class="nav-link">Rosa</a>
+                <!--<a href="#calendario" class="nav-link">Calendario</a> -->
+                <a href="#risultati" class="nav-link">Risultati</a>
+                <a href="#classifica" class="nav-link">Classifica</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <section class="match-banner">
+        <div class="team">
+            <img src="{{ url_for('static', filename='images/gasolina_logo-removebg-preview.png') }}"
+                alt="Logo Squadra" />
+            <p>Gasolina United</p>
+        </div>
+
+        <div class="countdown">
+            <h2>Prossima Partita</h2>
+            <div id="timer">00:00:00</div>
+            <h2>25 Maggio 2025 - 19:00</h2>
+        </div>
+
+        <div class="team2">
+            <img src="{{ url_for('static', filename='images/Tamil.png') }}" alt="Logo Avversario" />
+            <p>I Picciotti Tamil</p>
+        </div>
+    </section>
+
+    <section id="rosa">
+        <h2>ROSA</h2>
+        <section id="rosa">
+            <div class="giocatori-grid">
+                <div class="giocatore">
+                    <img src="{{ url_for('static', filename='images/giocatori/Scarpitta.jpg') }}" alt="Giocatore 1">
+                    <h3>Gabriele Scarpitta</h3>
+                    <p>#17 - Laterale</p>
+                </div>
+                <div class="giocatore">
+                    <img src="{{ url_for('static', filename='images/giocatori/LiVolsi.jpg') }}" alt="Giocatore 2">
+                    <h3>Umberto Li Volsi</h3>
+                    <p>#13 - Laterale</p>
+                </div>
+                <div class="giocatore">
+                    <img src="{{ url_for('static', filename='images/giocatori/Bonura.jpg') }}" alt="Giocatore 2">
+                    <h3>Alessio Fortunato Bonura</h3>
+                    <p>#10 - Laterale</p>
+                </div>
+                <div class="giocatore">
+                    <img src="{{ url_for('static', filename='images/giocatori/Ruffino.jpg') }}" alt="Giocatore 2">
+                    <h3>Angelo Ruffino</h3>
+                    <p>#21 - Portiere</p>
+                </div>
+                <div class="giocatore">
+                    <img src="{{ url_for('static', filename='images/giocatori/Blandino.jpg') }}" alt="Giocatore 2">
+                    <h3>Roberto Maria Blandino</h3>
+                    <p>#16 - Difensore</p>
+                </div>
+                <div class="giocatore">
+                    <img src="{{ url_for('static', filename='images/giocatori/Manuli.jpg') }}" alt="Giocatore 2">
+                    <h3>Marco Manuli</h3>
+                    <p>#7 - Attaccante</p>
+                </div>
+                <div class="giocatore">
+                    <img src="{{ url_for('static', filename='images/giocatori/Esposito.jpg') }}" alt="Giocatore 2">
+                    <h3>Andrea Esposito</h3>
+                    <p>#45 - Difensore</p>
+                </div>
+                <div class="giocatore">
+                    <img src="{{ url_for('static', filename='images/giocatori/Ganci.jpg') }}" alt="Giocatore 2">
+                    <h3>Walter Ganci</h3>
+                    <p>#9 - Attaccante</p>
+                </div>
+                <div class="giocatore">
+                    <img src="{{ url_for('static', filename='images/giocatori/Valdes.jpg') }}" alt="Giocatore 2">
+                    <h3>Andrea Valdes</h3>
+                    <p>#27 - Laterale</p>
+                </div>
+                <!-- Ripeti per gli altri 7 giocatori -->
+            </div>
+        </section>
+
+    </section>
+    <!--
+    <section id="calendario">
+        <h2>Calendario Partite</h2>
+
+        <div class="partita">
+            <img src="{{ url_for('static', filename='images/gasolina_logo-removebg-preview.png') }}" alt="Squadra A"
+                class="logo-partita">
+
+            <div class="info-partita">
+                <h3>Gasolina FC vs Eiaculazio FC</h3>
+                <p>Domenica 18 Maggio - ore 17:00</p>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/Eiaculazio.png') }}" alt="Squadra B" class="logo-partita">
+        </div>
+    -->
+    <!-- Altre partite -->
+    <!--
+        <div class="partita">
+            <img src="{{ url_for('static', filename='images/gasolina_logo-removebg-preview.png') }}" alt="Squadra C"
+                class="logo-partita">
+
+            <div class="info-partita">
+                <h3>Gasolina FC vs I Picciotti Tamil</h3>
+                <p>Da Definire</p>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/Tamil.png') }}" alt="Squadra D" class="logo-partita">
+        </div>
+    </section> 
+     -->
+    <section class="results-section" id="risultati">
+        <h2>RISULTATI</h2>
+
+        <div class="result-box">
+            <div class="match-info">Giornata 1 - 15 Marzo 2025</div>
+            <div class="match-score">
+                <span class="team left">Gasolina United</span>
+                <span class="score">9 - 2</span>
+                <span class="team right">Armani Vez</span>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="match-info">Giornata 2 - 22 Marzo 2025</div>
+            <div class="match-score">
+                <span class="team left">Gasolina United</span>
+                <span class="score">5 - 3</span>
+                <span class="team right">Galacticos STF</span>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="match-info">Giornata 3 - 30 Marzo 2025</div>
+            <div class="match-score">
+                <span class="team left">Gasolina United</span>
+                <span class="score">5 - 0</span>
+                <span class="team right">Torrino</span>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="match-info">Giornata 4 - 5 Aprile 2025</div>
+            <div class="match-score">
+                <span class="team left">Gasolina United</span>
+                <span class="score">4 - 0</span>
+                <span class="team right">Esaltaty</span>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="match-info">Giornata 5 - 12 Aprile 2025</div>
+            <div class="match-score">
+                <span class="team left">Gasolina United</span>
+                <span class="score">1 - 6</span>
+                <span class="team right">Ciriminchioni</span>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="match-info">Giornata 6 - 18 Aprile 2025</div>
+            <div class="match-score">
+                <span class="team left">Gasolina United</span>
+                <span class="score">3 - 2</span>
+                <span class="team right">Ballack Coi Lupi</span>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="match-info">Giornata 7 - 27 Aprile 2025</div>
+            <div class="match-score">
+                <span class="team left">Gasolina United</span>
+                <span class="score">3 - 3</span>
+                <span class="team right">Gocciole Dark</span>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="match-info">Giornata 8 - 3 Maggio 2025</div>
+            <div class="match-score">
+                <span class="team left">Gasolina United</span>
+                <span class="score">0 - 1</span>
+                <span class="team right">Cornadura</span>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="match-info">Giornata 9 - 11 Maggio 2025</div>
+            <div class="match-score">
+                <span class="team left">Gasolina United</span>
+                <span class="score">2 - 3</span>
+                <span class="team right">Virtus Nova</span>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <div class="match-info">Giornata 10 - 18 Maggio 2025</div>
+            <div class="match-score">
+                <span class="team left">Gasolina United</span>
+                <span class="score">4 - 2</span>
+                <span class="team right">Eiaculazio</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Altri risultati -->
+    </section>
+
+
+    <!--<main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2025 Gasolina United - Powered by The House</p>
+    </footer>-->
+
+    <script>
+        // Sostituisci con la data e ora della tua prossima partita
+        const matchDate = new Date(Date.UTC(2025, 4, 25, 17, 0, 0)).getTime();
+
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = matchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML =
+                `${days}g ${hours}h ${minutes}m ${seconds}s`;
+        }, 1000);  // Aggiorna ogni secondo
+
+        if (distance < 0) {
+            clearInterval(countdown);
+            document.getElementById("timer").innerHTML = "In corso!";
+        }
+
+    </script>
+
+    <section id="classifica" class="classifica">
+        <h2>CLASSIFICA SERIE C1</h2>
+        <div class="classifica-container">
+            <div class="classifica-row pos-1">
+                <div class="posizione">1</div>
+                <div class="squadra">Virtus Nova</div>
+                <div class="punti">15,1</div>
+            </div>
+            <div class="classifica-row pos-2 my-team">
+                <div class="posizione">2</div>
+                <div class="squadra">Gasolina United</div>
+                <div class="punti">13,1</div>
+            </div>
+            <div class="classifica-row pos-3">
+                <div class="posizione">3</div>
+                <div class="squadra">Torrino</div>
+                <div class="punti">12,1</div>
+            </div>
+            <div class="classifica-row pos-4">
+                <div class="posizione">4</div>
+                <div class="squadra">Esaltaty</div>
+                <div class="punti">10,8</div>
+            </div>
+            <div class="classifica-row pos-5">
+                <div class="posizione">5</div>
+                <div class="squadra">Cornadura FC</div>
+                <div class="punti">10,7</div>
+            </div>
+            <div class="classifica-row pos-6">
+                <div class="posizione">6</div>
+                <div class="squadra">Ballack coi Lupi</div>
+                <div class="punti">10,6</div>
+            </div>
+            <div class="classifica-row pos-7">
+                <div class="posizione">7</div>
+                <div class="squadra">Eiaculazio</div>
+                <div class="punti">10</div>
+            </div>
+            <div class="classifica-row pos-8">
+                <div class="posizione">8</div>
+                <div class="squadra">Armani Vez</div>
+                <div class="punti">9,9</div>
+            </div>
+            <div class="classifica-row pos-9">
+                <div class="posizione">9</div>
+                <div class="squadra">Gocciole Dark</div>
+                <div class="punti">9,4</div>
+            </div>
+            <div class="classifica-row pos-10">
+                <div class="posizione">10</div>
+                <div class="squadra">Ciriminchioni</div>
+                <div class="punti">7,2</div>
+            </div>
+            <div class="classifica-row pos-11">
+                <div class="posizione">11</div>
+                <div class="squadra">I picciotti Tamil</div>
+                <div class="punti">6,2</div>
+            </div>
+            <div class="classifica-row pos-12">
+                <div class="posizione">12</div>
+                <div class="squadra">Galacticos STF</div>
+                <div class="punti">6,1</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const classificaSection = document.querySelector('#classifica');
+            const rows = classificaSection.querySelectorAll('.classifica-row');
+
+            rows.forEach(row => {
+                row.style.animationPlayState = 'paused';
+            });
+
+            function isInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.top <= window.innerHeight && rect.bottom >= 0;
+            }
+
+            function animateRows() {
+                rows.forEach((row, i) => {
+                    row.style.animationDelay = `${i * 0.2}s`;
+                    row.style.animationPlayState = 'running';
+                });
+            }
+
+            function handleScroll() {
+                if (isInViewport(classificaSection)) {
+                    animateRows();
+                    window.removeEventListener('scroll', handleScroll);
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // nel caso sia già visibile
+        });
+    </script>
+
+</body>
+
+</html>
